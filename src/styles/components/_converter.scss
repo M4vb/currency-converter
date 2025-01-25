@@ -1,0 +1,87 @@
+// Currency converter component styles
+.converter-container {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--container-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Title styles
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+// Form group styles
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+
+    label {
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    // Number input styles
+    input[type="number"] {
+        appearance: textfield;
+        padding: 0.75rem;
+        border: 2px solid var(--shadow-color);
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        background-color: var(--container-bg);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        outline: none;
+        width: 100%;
+        
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        &:hover {
+            border-color: #0056b3;
+        }
+
+        // Remove spinner buttons
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+// Convert button styles
+.convert-button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+// Result display styles
+.result {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
